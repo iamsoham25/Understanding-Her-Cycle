@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Her Cycle: A Partner's Guide</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Define CSS Variables for Light Mode (Default) */
+        :root {
+            --color-primary-bg: #f0f4f8; /* Lighter blue-gray, body background */
+            --color-secondary-bg: #ffffff; /* White, card/section background */
+            --color-text-primary: #1f2937; /* Dark gray, main text */
+            --color-text-secondary: #4b5563; /* Medium gray, secondary text */
+            --color-nav-start: #3b82f6; /* Blue-600 */
+            --color-nav-end: #8b5cf6; /* Purple-700 */
+            --color-accent-blue: #2563eb; /* Blue-700 */
+            --color-accent-purple: #7c3aed; /* Purple-600 */
+            --color-accent-pink: #ec4899; /* Pink-500 */
+            --color-accent-red: #ef4444; /* Red-600 */
+            --color-accent-green: #10b981; /* Green-500 */
+            --color-accent-yellow: #f59e0b; /* Yellow-500 */
+            --color-accent-indigo: #4f46e5; /* Indigo-600 */
+            --color-accent-teal: #14b8a6; /* Teal-600 */
+
+            --color-section-home-start: #dbeafe; /* Blue-100 */
+            --color-section-home-end: #ede9fe; /* Purple-100 */
+            --color-section-resources-bg: #ffffff;
+            --color-section-tracker-start: #e0e7ff; /* Indigo-100 */
+            --color-section-tracker-end: #dbeafe; /* Blue-100 */
+            --color-section-professionals-start: #ccfbf1; /* Teal-100 */
+            --color-section-professionals-end: #cffafe; /* Cyan-100 */
+            --color-section-chatbot-start: #ede9fe; /* Purple-100 */
+            --color-section-chatbot-end: #fce7f3; /* Pink-100 */
+
+            /* Specific card background gradients for light mode */
+            --card-indigo-purple-start: #eef2ff; /* indigo-50 */
+            --card-indigo-purple-end: #f5f3ff; /* purple-50 */
+            --card-blue-cyan-start: #eff6ff; /* blue-50 */
+            --card-blue-cyan-end: #ecfeff; /* cyan-50 */
+            --card-green-emerald-start: #ecfdf5; /* green-50 */
+            --card-green-emerald-end: #f0fdf4; /* emerald-50 */
+            --card-yellow-orange-start: #fffbeb; /* yellow-50 */
+            --card-yellow-orange-end: #fff7ed; /* orange-50 */
+            --card-purple-pink-start: #f5f3ff; /* purple-50 */
+            --card-purple-pink-end: #fdf2f8; /* pink-50 */
+            --card-red-rose-start: #fef2f2; /* red-50 */
+            --card-red-rose-end: #fff1f2; /* rose-50 */
+
+            /* SVG colors for light mode */
+            --svg-bg-1: #a7d9f2; /* Softer blue */
+            --svg-bg-2: #b3e0ff; /* Light blue */
+            --svg-fill-white: #FFFFFF;
+            --svg-stroke-dark: #6a0dad; /* Darker purple */
+            --svg-text-dark: #333333;
+        }
+
+        /* Define CSS Variables for Dark Mode */
+        body[data-theme="dark"] {
+            --color-primary-bg: #0d1117; /* Very dark blue-gray, almost black */
+            --color-secondary-bg: #161b22; /* Darker gray, card/section background */
+            --color-text-primary: #e6edf3; /* Light gray, main text */
+            --color-text-secondary: #c9d1d9; /* Lighter gray, secondary text */
+            --color-nav-start: #161b22; /* Dark gray */
+            --color-nav-end: #21262d; /* Darker gray */
+            --color-accent-blue: #58a6ff; /* Lighter blue for accents */
+            --color-accent-purple: #a371f7; /* Lighter purple for accents */
+            --color-accent-pink: #f781bf; /* Lighter pink for accents */
+            --color-accent-red: #f06b6b; /* Lighter red for accents */
+            --color-accent-green: #3fb950; /* Lighter green for accents */
+            --color-accent-yellow: #e3b341; /* Lighter yellow for accents */
+            --color-accent-indigo: #79c0ff; /* Lighter indigo for accents */
+            --color-accent-teal: #56d4c0; /* Lighter teal for accents */
+
+            --color-section-home-start: #161b22;
+            --color-section-home-end: #21262d;
+            --color-section-resources-bg: #161b22;
+            --color-section-tracker-start: #21262d;
+            --color-section-tracker-end: #161b22;
+            --color-section-professionals-start: #161b22;
+            --color-section-professionals-end: #21262d;
+            --color-section-chatbot-start: #21262d;
+            --color-section-chatbot-end: #161b22;
+
+            /* Specific card background gradients for dark mode */
+            --card-indigo-purple-start: #21262d;
+            --card-indigo-purple-end: #161b22;
+            --card-blue-cyan-start: #21262d;
+            --card-blue-cyan-end: #161b22;
+            --card-green-emerald-start: #21262d;
+            --card-green-emerald-end: #161b22;
+            --card-yellow-orange-start: #21262d;
+            --card-yellow-orange-end: #161b22;
+            --card-purple-pink-start: #21262d;
+            --card-purple-pink-end: #161b22;
+            --card-red-rose-start: #21262d;
+            --card-red-rose-end: #161b22;
+
+            /* SVG colors for dark mode */
+            --svg-bg-1: #21262d;
+            --svg-bg-2: #161b22;
+            --svg-fill-white: #e6edf3;
+            --svg-stroke-dark: #a371f7;
+            --svg-text-dark: #e6edf3;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            background-color: var(--color-primary-bg);
+            color: var(--color-text-primary);
+            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth theme transition */
+            scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
+        }
+        .section-content {
+            /* Removed padding-top and margin-top from here */
+            min-height: calc(100vh - 80px); /* Ensure sections take up full viewport height minus navbar */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* Add scroll-margin-top to account for fixed navbar when scrolling to anchors */
+            scroll-margin-top: 96px; /* Match main's pt-24 (6rem * 16px/rem = 96px) */
+        }
+
+        /* Custom styles for better aesthetics using variables */
+        .rounded-lg { border-radius: 0.75rem; }
+        .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+        .shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+        .shadow-inner { box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); }
+        .transition-all { transition-property: all; transition-duration: 300ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+        .transform { transform: var(--tw-transform); }
+        .hover\\:scale-105:hover { --tw-scale-x: 1.05; --tw-scale-y: 1.05; transform: var(--tw-transform); }
+
+        /* Modal specific styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.6);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: var(--color-secondary-bg);
+            color: var(--color-text-primary);
+            margin: auto;
+            padding: 20px;
+            border-radius: 0.75rem;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            position: relative;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .close-button {
+            color: var(--color-text-secondary);
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .close-button:hover,
+        .close-button:focus {
+            color: var(--color-text-primary);
+            text-decoration: none;
+            cursor: pointer;
+        }
+        /* Chatbot specific styles */
+        .chat-container {
+            display: flex;
+            flex-direction: column;
+            height: 600px;
+            border: 1px solid var(--color-text-secondary);
+            border-radius: 0.75rem;
+            overflow: hidden;
+            background-color: var(--color-secondary-bg);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        .chat-messages {
+            flex-grow: 1;
+            padding: 1rem;
+            overflow-y: auto;
+            background-color: var(--color-primary-bg);
+            transition: background-color 0.3s ease;
+        }
+        .chat-input-area {
+            display: flex;
+            padding: 1rem;
+            border-top: 1px solid var(--color-text-secondary);
+            background-color: var(--color-secondary-bg);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        .chat-input-area input {
+            flex-grow: 1;
+            border: 1px solid var(--color-text-secondary);
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+            margin-right: 0.5rem;
+            outline: none;
+            background-color: var(--color-secondary-bg);
+            color: var(--color-text-primary);
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+        .chat-input-area button {
+            background-color: var(--color-accent-indigo);
+            color: white;
+            padding: 0.75rem 1.25rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .chat-input-area button:hover {
+            background-color: var(--color-accent-purple); /* Darker indigo or related accent */
+        }
+        .message-bubble {
+            max-width: 80%;
+            padding: 0.75rem 1rem;
+            border-radius: 1rem;
+            margin-bottom: 0.5rem;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+            color: var(--color-text-primary); /* Ensure message text also adapts */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .message-bubble.user {
+            background-color: var(--color-section-tracker-start); /* Light blue for user, using a variable */
+            align-self: flex-end;
+            margin-left: auto;
+        }
+        .message-bubble.ai {
+            background-color: var(--color-section-professionals-start); /* Light teal for AI, using a variable */
+            align-self: flex-start;
+            margin-right: auto;
+        }
+        .loading-indicator {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            color: var(--color-text-secondary);
+        }
+    </style>
+</head>
+<body class="min-h-screen" data-theme="light">
+
+    <!-- Navbar -->
+    <nav class="bg-gradient-to-r from-[var(--color-nav-start)] to-[var(--color-nav-end)] p-4 shadow-lg rounded-b-lg fixed w-full top-0 z-50">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-white text-3xl font-bold font-inter mb-2 md:mb-0">Understanding Her Cycle</h1>
+            <div class="flex space-x-4 items-center">
+                <button id="nav-home" class="px-4 py-2 rounded-lg transition-all duration-300 text-white hover:bg-white hover:text-[var(--color-accent-blue)] hover:shadow-md font-medium text-lg">Home</button>
+                <button id="nav-resources" class="px-4 py-2 rounded-lg transition-all duration-300 text-white hover:bg-white hover:text-[var(--color-accent-blue)] hover:shadow-md font-medium text-lg">Resources</button>
+                <button id="nav-tracker" class="px-4 py-2 rounded-lg transition-all duration-300 text-white hover:bg-white hover:text-[var(--color-accent-blue)] hover:shadow-md font-medium text-lg">Cycle Predictor</button>
+                <button id="nav-professionals" class="px-4 py-2 rounded-lg transition-all duration-300 text-white hover:bg-white hover:text-[var(--color-accent-blue)] hover:shadow-md font-medium text-lg">Find Support</button>
+                <button id="nav-chatbot" class="px-4 py-2 rounded-lg transition-all duration-300 text-white hover:bg-white hover:text-[var(--color-accent-blue)] hover:shadow-md font-medium text-lg">AI Chat</button>
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="ml-4 p-2 rounded-full bg-white text-[var(--color-accent-blue)] hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-[var(--color-accent-blue)] transition-all duration-300">
+                    <!-- Sun Icon (Light Mode) -->
+                    <svg id="sun-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h1M4 12H3m15.325 3.325l-.707.707M6.343 6.343l-.707-.707m12.728 0l-.707-.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                    <!-- Moon Icon (Dark Mode) - Hidden by default -->
+                    <svg id="moon-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto pt-24 p-4 max-w-7xl text-center">
+        <!-- Home Section -->
+        <div id="section-home" class="section-content p-8 py-12 rounded-lg shadow-inner bg-gradient-to-br from-[var(--color-section-home-start)] to-[var(--color-section-home-end)]">
+            <div class="relative z-10 text-center w-full max-w-4xl mx-auto">
+                <h2 class="text-5xl font-extrabold text-[var(--color-accent-blue)] mb-6 font-inter leading-tight">
+                    Be Her Support: Understand Her Cycle
+                </h2>
+                <p class="text-xl text-[var(--color-text-secondary)] max-w-2xl mb-8 mx-auto">
+                    Welcome to your comprehensive guide for partners. This portal is designed for men who want to better understand women's menstrual cycles and overall health.
+                </p>
+
+                <!-- New: Image and Text Section 1 -->
+                <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-12 mt-12">
+                    <div class="md:w-1/2">
+                        <!-- Inline SVG for Couple Understanding Each Other -->
+                        <svg class="rounded-lg shadow-md w-full h-auto" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="svg1Title svg1Desc">
+                            <title id="svg1Title">Couple Understanding Each Other</title>
+                            <desc id="svg1Desc">Abstract illustration of two figures with intertwined lines, symbolizing understanding and connection, on a soft blue background.</desc>
+                            <rect width="600" height="400" fill="var(--svg-bg-1)"/>
+                            <circle cx="200" cy="200" r="80" fill="var(--svg-fill-white)" opacity="0.8"/>
+                            <circle cx="400" cy="200" r="80" fill="var(--svg-fill-white)" opacity="0.8"/>
+                            <path d="M200 200 Q300 100 400 200" stroke="var(--svg-stroke-dark)" stroke-width="5" fill="none"/>
+                            <path d="M200 200 Q300 300 400 200" stroke="var(--svg-stroke-dark)" stroke-width="5" fill="none"/>
+                            <text x="300" y="200" font-family="Inter, sans-serif" font-size="28" font-weight="bold" fill="var(--svg-text-dark)" text-anchor="middle" alignment-baseline="middle">Empathy & Connection</text>
+                        </svg>
+                    </div>
+                    <div class="md:w-1/2 text-left">
+                        <h3 class="text-3xl font-bold text-[var(--color-accent-indigo)] mb-4">Why Understanding Her Cycle Matters</h3>
+                        <p class="text-lg text-[var(--color-text-secondary)] mb-4">
+                            Her menstrual cycle is a fundamental aspect of her health and well-being, influencing not just physical states but also mood, energy, and emotional responses. By understanding these natural rhythms, you can offer more meaningful support and build a stronger, more empathetic relationship.
+                        </p>
+                        <p class="text-lg text-[var(--color-text-secondary)]">
+                            This knowledge helps you anticipate her needs, validate her experiences, and navigate daily life with greater harmony. It's about being a truly supportive partner.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- New: Key Features Section -->
+                <div class="bg-[var(--color-secondary-bg)] p-8 rounded-lg shadow-lg mb-12">
+                    <h3 class="text-3xl font-bold text-[var(--color-accent-blue)] mb-6">What You'll Find Here:</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+                        <div class="flex flex-col items-center text-center p-4 rounded-lg bg-gradient-to-br from-[var(--card-blue-cyan-start)] to-[var(--card-blue-cyan-end)] shadow-sm transition-all duration-300 hover:scale-105">
+                            <div class="text-4xl mb-3">📚</div>
+                            <h4 class="text-xl font-semibold text-[var(--color-text-primary)] mb-2">In-depth Resources</h4>
+                            <p class="text-[var(--color-text-secondary)] text-sm">Comprehensive articles on cycle phases, symptoms, and coping strategies.</p>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-4 rounded-lg bg-gradient-to-br from-[var(--card-indigo-purple-start)] to-[var(--card-indigo-purple-end)] shadow-sm transition-all duration-300 hover:scale-105">
+                            <div class="text-4xl mb-3">🗓️</div>
+                            <h4 class="text-xl font-semibold text-[var(--color-text-primary)] mb-2">Cycle Predictor</h4>
+                            <p class="text-[var(--color-text-secondary)] text-sm">An easy-to-use tool to estimate her next period and fertile window.</p>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-4 rounded-lg bg-gradient-to-br from-[var(--card-purple-pink-start)] to-[var(--card-purple-pink-end)] shadow-sm transition-all duration-300 hover:scale-105">
+                            <div class="text-4xl mb-3">💬</div>
+                            <h4 class="text-xl font-semibold text-[var(--color-text-primary)] mb-2">AI Chatbot</h4>
+                            <p class="text-[var(--color-text-secondary)] text-sm">Get quick, personalized answers to your questions about mood swings and support.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New: Image and Text Section 2 -->
+                <div class="flex flex-col md:flex-row-reverse items-center justify-center gap-8 mb-12">
+                    <div class="md:w-1/2">
+                        <!-- Inline SVG for Supportive Partnership -->
+                        <svg class="rounded-lg shadow-md w-full h-auto" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="svg2Title svg2Desc">
+                            <title id="svg2Title">Supportive Partnership</title>
+                            <desc id="svg2Desc">Abstract illustration of two figures with hands joined, symbolizing support and connection, on a light blue background.</desc>
+                            <rect width="600" height="400" fill="var(--svg-bg-2)"/>
+                            <path d="M150 250 C100 200 100 100 150 50 S250 0 300 50 S400 100 450 50 S500 200 450 250" fill="var(--svg-fill-white)" opacity="0.8"/>
+                            <path d="M250 350 C200 300 200 200 250 150 S350 100 400 150 S500 250 450 300 S350 400 300 350 Z" fill="var(--svg-fill-white)" opacity="0.8"/>
+                            <path d="M270 200 L330 200 L300 230 Z" fill="var(--svg-stroke-dark)"/>
+                            <path d="M200 250 L400 250" stroke="var(--svg-stroke-dark)" stroke-width="5" fill="none"/>
+                            <text x="300" y="200" font-family="Inter, sans-serif" font-size="28" font-weight="bold" fill="var(--svg-text-dark)" text-anchor="middle" alignment-baseline="middle">Stronger Together</text>
+                        </svg>
+                    </div>
+                    <div class="md:w-1/2 text-left">
+                        <h3 class="text-3xl font-bold text-[var(--color-accent-blue)] mb-4">Building a Stronger Connection</h3>
+                        <p class="text-lg text-[var(--color-text-secondary)] mb-4">
+                            This platform is more than just an information hub; it's a tool for strengthening your bond. By proactively seeking to understand, you're demonstrating care and commitment, which are cornerstones of any healthy relationship.
+                        </p>
+                        <p class="text-lg text-[var(--color-text-secondary)]">
+                            Empower yourself with knowledge, and empower her with your informed and compassionate presence. Together, you can navigate her cycle with greater ease and intimacy.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex space-x-4 justify-center">
+                    <button id="home-explore-resources" class="bg-gradient-to-r from-[var(--color-accent-blue)] to-[var(--color-accent-purple)] text-white px-8 py-4 rounded-full shadow-lg hover:from-[var(--color-accent-blue)] hover:to-[var(--color-accent-purple)] transition-all duration-300 text-lg font-semibold transform hover:scale-105">
+                        Dive into Resources
+                    </button>
+                    <button id="home-start-tracking" class="bg-gradient-to-r from-[var(--color-accent-pink)] to-[var(--color-accent-red)] text-white px-8 py-4 rounded-full shadow-lg hover:from-[var(--color-accent-pink)] hover:to-[var(--color-accent-red)] transition-all duration-300 text-lg font-semibold transform hover:scale-105">
+                        Try the Cycle Predictor
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resources Section -->
+        <div id="section-resources" class="section-content p-8 bg-[var(--color-secondary-bg)] rounded-lg shadow-lg">
+            <h2 class="text-4xl font-bold text-[var(--color-accent-blue)] mb-8 text-center font-inter">Resources for Understanding & Support</h2>
+
+            <div class="max-w-5xl mx-auto">
+                <!-- New: Personalized Support Suggestion -->
+                <div class="bg-gradient-to-br from-[var(--card-indigo-purple-start)] to-[var(--card-indigo-purple-end)] border-l-4 border-[var(--color-accent-indigo)] text-[var(--color-text-primary)] p-6 rounded-lg shadow-md mb-8">
+                    <h3 class="text-2xl font-semibold mb-3">✨ Personalized Support Suggestion</h3>
+                    <p class="mb-4 text-[var(--color-text-secondary)]">
+                        Describe how she's feeling right now, and our AI will suggest ways you can offer support.
+                    </p>
+                    <textarea id="support-input" class="w-full p-3 border border-[var(--color-text-secondary)] rounded-lg mb-4 resize-y bg-[var(--color-secondary-bg)] text-[var(--color-text-primary)]" rows="3" placeholder="e.g., 'She's feeling very irritable and withdrawn today.' or 'She has bad cramps and is quiet.'"></textarea>
+                    <button id="get-support-btn" class="w-full bg-gradient-to-r from-[var(--color-accent-indigo)] to-[var(--color-accent-purple)] text-white px-6 py-3 rounded-full shadow-lg hover:from-[var(--color-accent-indigo)] hover:to-[var(--color-accent-purple)] transition-all duration-300 text-lg font-semibold transform hover:scale-105">
+                        Get Support Ideas
+                    </button>
+                    <div id="support-output" class="mt-6 p-4 bg-[var(--card-indigo-purple-start)] border border-[var(--color-accent-indigo)] rounded-lg hidden text-left">
+                        <p class="font-semibold mb-2">AI's Suggestion:</p>
+                        <div id="support-text" class="text-[var(--color-text-primary)]"></div>
+                    </div>
+                    <div id="support-loading" class="loading-indicator hidden mt-4">
+                        <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-[var(--color-accent-indigo)]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Generating personalized advice...
+                    </div>
+                </div>
+
+                <!-- New: Detailed Cycle Phases Explained -->
+                <div class="bg-gradient-to-br from-[var(--card-blue-cyan-start)] to-[var(--card-blue-cyan-end)] border-l-4 border-[var(--color-accent-blue)] text-[var(--color-text-primary)] p-6 rounded-lg shadow-md mb-8">
+                    <h3 class="text-2xl font-semibold mb-3">Understanding Her Cycle Phases</h3>
+                    <p class="mb-4 text-[var(--color-text-secondary)]">
+                        A typical menstrual cycle lasts about 28 days, but can vary. Understanding its four main phases can help you anticipate changes and offer better support.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto text-left">
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">1. Menstrual Phase (Days 1-5 approx.)</h4>
+                            <p class="mb-2 text-[var(--color-text-secondary)]">
+                                This is when she has her period. The uterine lining sheds, leading to bleeding.
+                            </p>
+                            <ul class="list-disc list-inside text-sm text-[var(--color-text-secondary)]">
+                                <li>What she might feel: Cramps, bloating, fatigue, mood swings, headaches.</li>
+                                <li>How you can help: Offer comfort (hot water bottle), listen, help with chores, ensure she has supplies.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">2. Follicular Phase (Days 6-13 approx.)</h4>
+                            <p class="mb-2 text-[var(--color-text-secondary)]">
+                                After her period, hormones rise to prepare an egg. Energy often increases.
+                            </p>
+                            <ul class="list-disc list-inside text-sm text-[var(--color-text-secondary)]">
+                                <li>What she might feel: Increased energy, improved mood, feeling more social.</li>
+                                <li>How you can help: Encourage activities, plan dates, enjoy her renewed energy.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">3. Ovulatory Phase (Day 14 approx.)</h4>
+                            <p class="mb-2 text-[var(--color-text-secondary)]">
+                                An egg is released from the ovary. This is her most fertile time.
+                            </p>
+                            <ul class="list-disc list-inside text-sm text-[var(--color-text-secondary)]">
+                                <li>What she might feel: Some might feel a slight cramp (mittelschmerz), increased libido, high energy.</li>
+                                <li>How you can help: Be aware of this fertile window if you are planning a family or practicing contraception.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">4. Luteal Phase (Days 15-28 approx.)</h4>
+                            <p class="mb-2 text-[var(--color-text-secondary)]">
+                                The body prepares for a possible pregnancy. If no pregnancy, hormones drop, leading to PMS.
+                            </p>
+                            <ul class="list-disc list-inside text-sm text-[var(--color-text-secondary)]">
+                                <li>What she might feel: PMS symptoms like irritability, anxiety, bloating, breast tenderness, cravings.</li>
+                                <li>How you can help: Be extra patient, offer comfort, avoid arguments, understand mood changes are hormonal.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="text-sm italic mt-4 text-[var(--color-text-secondary)]">
+                        These are averages. Every woman's cycle is unique. Open communication is always best.
+                    </p>
+                </div>
+
+                <!-- New: Common Symptoms & How to Help -->
+                <div class="bg-gradient-to-br from-[var(--card-green-emerald-start)] to-[var(--card-green-emerald-end)] border-l-4 border-[var(--color-accent-green)] text-[var(--color-text-primary)] p-6 rounded-lg shadow-md mb-8">
+                    <h3 class="text-2xl font-semibold mb-3">Common Symptoms & How You Can Help</h3>
+                    <p class="mb-4 text-[var(--color-text-secondary)]">
+                        Her period can come with various physical and emotional symptoms. Knowing what they are and how to respond can make a big difference.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto text-left">
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Cramps & Backache:</h4>
+                            <ul class="list-disc list-inside mb-2 text-sm text-[var(--color-text-secondary)]">
+                                <li>Offer a hot water bottle or heating pad.</li>
+                                <li>Suggest pain relievers (if she takes them).</li>
+                                <li>Offer a gentle back massage.</li>
+                                <li>Encourage light activity if she feels up to it, or rest if she needs it.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Bloating & Digestive Issues:</h4>
+                            <ul class="list-disc list-inside mb-2 text-sm text-[var(--color-text-secondary)]">
+                                <li>Avoid making comments about her body.</li>
+                                <li>Suggest light, easy-to-digest meals.</li>
+                                <li>Offer peppermint tea or ginger.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Fatigue & Low Energy:</h4>
+                            <ul class="list-disc list-inside mb-2 text-sm text-[var(--color-text-secondary)]">
+                                <li>Encourage rest and naps.</li>
+                                <li>Take over chores or errands.</li>
+                                <li>Prepare simple, nutritious meals.</li>
+                                <li>Offer to watch her favorite movie.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Mood Swings & Irritability:</h4>
+                            <ul class="list-disc list-inside mb-2 text-sm text-[var(--color-text-secondary)]">
+                                <li>Practice patience and empathy.</li>
+                                <li>Listen without judgment.</li>
+                                <li>Avoid arguments or sensitive topics.</li>
+                                <li>Give her space if she needs it, or offer a comforting hug.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Cravings:</h4>
+                            <ul class="list-disc list-inside mb-2 text-sm text-[var(--color-text-secondary)]">
+                                <li>Offer to get her favorite snacks (chocolate, salty foods, etc.).</li>
+                                <li>Don't comment on her food choices during this time.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Headaches & Breast Tenderness:</h4>
+                            <ul class="list-disc list-inside mb-2 text-sm text-[var(--color-text-secondary)]">
+                                <li>Offer a gentle head massage.</li>
+                                <li>Ensure she's hydrated.</li>
+                                <li>Suggest comfortable clothing.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="text-sm italic mt-4 text-[var(--color-text-secondary)]">
+                        Remember, every woman experiences these differently. The best approach is always to ask her directly what she needs.
+                    </p>
+                </div>
+
+                <!-- New: Myths vs. Facts Section -->
+                <div class="bg-gradient-to-br from-[var(--card-yellow-orange-start)] to-[var(--card-yellow-orange-end)] border-l-4 border-[var(--color-accent-yellow)] text-[var(--color-text-primary)] p-6 rounded-lg shadow-md mb-8">
+                    <h3 class="text-2xl font-semibold mb-3">Myths vs. Facts About Periods</h3>
+                    <p class="mb-4 text-[var(--color-text-secondary)]">
+                        Let's clear up some common misunderstandings to help you better understand and support her.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto text-left">
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Myth: Periods are "dirty" or shameful.</h4>
+                            <p class="mb-2 text-sm text-[var(--color-text-secondary)]">
+                                Fact: Periods are a natural, healthy biological process. There is absolutely nothing dirty or shameful about them.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Myth: Women are "crazy" or overly emotional on their period.</h4>
+                            <p class="mb-2 text-sm text-[var(--color-text-secondary)]">
+                                Fact: Hormonal fluctuations can cause mood changes, but these are a physiological response, not a sign of irrationality. Empathy is key.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Myth: All women have the same cycle length and symptoms.</h4>
+                            <p class="mb-2 text-sm text-[var(--color-text-secondary)]">
+                                Fact: Cycle lengths and symptoms vary greatly from person to person. What's normal for one woman might not be for another.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Myth: You can't get pregnant during her period.</h4>
+                            <p class="mb-2 text-sm text-[var(--color-text-secondary)]">
+                                Fact: While less likely, it's still possible due to sperm survival and variable ovulation times. Always use protection if pregnancy is not desired.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Myth: Exercise is bad during her period.</h4>
+                            <p class="mb-2 text-sm text-[var(--color-text-secondary)]">
+                                Fact: Exercise can actually help reduce cramps and improve mood. Encourage her to do what feels comfortable for her body.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Myth: PMS is "all in her head."</h4>
+                            <p class="mb-2 text-sm text-[var(--color-text-secondary)]">
+                                Fact: Premenstrual Syndrome (PMS) is a real condition with physical and emotional symptoms caused by hormonal changes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Supporting Her During Her Period (retained and moved up for prominence) -->
+                <div class="bg-gradient-to-br from-[var(--card-purple-pink-start)] to-[var(--card-purple-pink-end)] border-l-4 border-[var(--color-accent-purple)] text-[var(--color-text-primary)] p-6 rounded-lg shadow-md mb-8">
+                    <h3 class="text-2xl font-semibold mb-3">Overall Support: Being Her Rock</h3>
+                    <p class="mb-4 text-[var(--color-text-secondary)]">
+                        Beyond specific symptoms, your general attitude and actions can make all the difference.
+                    </p>
+                    <h4 class="text-xl font-semibold mb-2">Key Principles:</h4>
+                    <ul class="list-disc list-inside mb-4 text-left text-[var(--color-text-secondary)]">
+                        <li>Listen actively: Sometimes, she just needs to vent. Offer a listening ear without trying to "fix" everything.</li>
+                        <li>Show empathy: Acknowledge her feelings and validate her experience. "I understand this must be tough."</li>
+                        <li>Offer practical help: Take some burden off her shoulders by handling household tasks, cooking, or running errands.</li>
+                        <li>Be patient: Her energy levels or mood might fluctuate. Understand these are often hormonal.</li>
+                        <li>Communicate openly: Ask her directly, "How can I support you right now?"</li>
+                        <li>Respect her privacy: Her cycle is personal. Use the predictor tool responsibly and with her consent.</li>
+                    </ul>
+                    <p class="text-sm italic text-[var(--color-text-secondary)]">
+                        Your understanding and support strengthen your relationship and contribute significantly to her well-being.
+                    </p>
+                </div>
+
+
+                <!-- Anaemia Information Card (retained) -->
+                <div class="bg-gradient-to-br from-[var(--card-red-rose-start)] to-[var(--card-red-rose-end)] border-l-4 border-[var(--color-accent-red)] text-[var(--color-text-primary)] p-6 rounded-lg shadow-md mb-8">
+                    <h3 class="text-2xl font-semibold mb-3">Understanding Anaemia (Important for Women's Health)</h3>
+                    <p class="mb-4 text-[var(--color-text-secondary)]">
+                        Anaemia is a condition where the body lacks enough healthy red blood cells, which carry oxygen. It's common in women, especially in India, often due to iron deficiency. Understanding this can help you support her overall well-being.
+                    </p>
+                    <h4 class="text-xl font-semibold mb-2">Key things to know:</h4>
+                    <ul class="list-disc list-inside mb-4 text-left text-[var(--color-text-secondary)]">
+                        <li>Symptoms include: Fatigue, weakness, pale skin, shortness of breath, dizziness.</li>
+                        <li>Dietary support: Encourage iron-rich foods like spinach, lentils, red meat, and foods high in Vitamin C (citrus fruits) to help iron absorption.</li>
+                    </ul>
+                    <p class="text-sm italic text-[var(--color-text-secondary)]">
+                        If you notice these symptoms in her, gently suggest she consult a healthcare professional.
+                    </p>
+                </div>
+
+                <!-- Other Placeholder Resource Cards - Reframed -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
+                    <div class="bg-[var(--color-secondary-bg)] p-6 rounded-lg shadow-md border border-[var(--color-text-secondary)] hover:shadow-lg transition-shadow duration-300">
+                        <div class="text-4xl mb-4 text-center">🍎</div>
+                        <h3 class="text-xl font-semibold text-[var(--color-text-primary)] mb-2 text-center">Nutrition & Her Well-being</h3>
+                        <p class="text-[var(--color-text-secondary)] text-sm text-center">Understand how diet impacts her health, especially during different cycle phases.</p>
+                    </div>
+                    <div class="bg-[var(--color-secondary-bg)] p-6 rounded-lg shadow-md border border-[var(--color-text-secondary)] hover:shadow-lg transition-shadow duration-300">
+                        <div class="text-4xl mb-4 text-center">🤰</div>
+                        <h3 class="text-xl font-semibold text-[var(--color-text-primary)] text-center">Pregnancy & Fertility Basics</h3>
+                        <p class="text-[var(--color-text-secondary)] text-sm text-center">Essential knowledge about fertility windows and pregnancy for partners.</p>
+                    </div>
+                    <div class="bg-[var(--color-secondary-bg)] p-6 rounded-lg shadow-md border border-[var(--color-text-secondary)] hover:shadow-lg transition-shadow duration-300">
+                        <div class="text-4xl mb-4 text-center">🏋️‍♀️</div>
+                        <h3 class="text-xl font-semibold text-[var(--color-text-primary)] text-center">Encouraging Her Fitness</h3>
+                        <p class="text-[var(--color-text-secondary)] text-sm text-center">How to support her physical activity and understand its benefits.</p>
+                    </div>
+                    <div class="bg-[var(--color-secondary-bg)] p-6 rounded-lg shadow-md border border-[var(--color-text-secondary)] hover:shadow-lg transition-shadow duration-300">
+                        <div class="text-4xl mb-4 text-center">🩺</div>
+                        <h3 class="text-xl font-semibold text-[var(--color-text-primary)] text-center">Importance of Her Check-ups</h3>
+                        <p class="text-[var(--color-text-secondary)] text-sm text-center">Why regular health screenings are crucial for her long-term health.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Period Tracker Section - Reframed as Cycle Predictor -->
+        <div id="section-tracker" class="section-content p-8 bg-gradient-to-br from-[var(--color-section-tracker-start)] to-[var(--color-section-tracker-end)] rounded-lg shadow-lg">
+            <h2 class="text-4xl font-bold text-[var(--color-accent-indigo)] mb-8 text-center font-inter">Predict Her Cycle</h2>
+            <div class="max-w-md mx-auto bg-[var(--color-secondary-bg)] p-8 rounded-lg shadow-md border border-[var(--color-text-secondary)]">
+                <p class="text-[var(--color-text-secondary)] mb-6 text-center">
+                    Enter her last period start date and average cycle length to get an estimate of her next period and fertile window. This can help you anticipate and offer support.
+                </p>
+                <p class="text-sm italic text-[var(--color-accent-red)] mb-4 text-center">
+                    Disclaimer: This tool is for general understanding and planning. Always respect her privacy and communicate openly about her cycle. Do not use this for any purpose without her explicit consent.
+                </p>
+
+                <div class="mb-6">
+                    <label for="lastPeriod" class="block text-[var(--color-text-primary)] text-sm font-bold mb-2 text-left">
+                        Her Last Period Start Date:
+                    </label>
+                    <input
+                        type="date"
+                        id="lastPeriod"
+                        class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-[var(--color-text-primary)] leading-tight focus:outline-none focus:ring-2 focus:ring-[var(--color-accent-blue)] bg-[var(--color-secondary-bg)]"
+                    />
+                </div>
+
+                <div class="mb-6">
+                    <label for="cycleLength" class="block text-[var(--color-text-primary)] text-sm font-bold mb-2 text-left">
+                        Her Average Cycle Length (days):
+                    </label>
+                    <input
+                        type="number"
+                        id="cycleLength"
+                        value="28"
+                        min="20"
+                        max="45"
+                        class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-[var(--color-text-primary)] leading-tight focus:outline-none focus:ring-2 focus:ring-[var(--color-accent-blue)] bg-[var(--color-secondary-bg)]"
+                    />
+                </div>
+
+                <button id="calculate-dates" class="w-full bg-gradient-to-r from-[var(--color-accent-blue)] to-[var(--color-accent-indigo)] text-white px-6 py-3 rounded-full shadow-lg hover:from-[var(--color-accent-blue)] hover:to-[var(--color-accent-indigo)] transition-all duration-300 text-lg font-semibold transform hover:scale-105">
+                    Calculate Dates
+                </button>
+
+                <div id="tracker-message" class="mt-8 p-6 bg-[var(--card-green-emerald-start)] border-l-4 border-[var(--color-accent-green)] text-[var(--color-text-primary)] rounded-lg shadow-md hidden text-left">
+                    <h3 class="text-xl font-semibold mb-3">Her Predicted Cycle:</h3>
+                    <p class="mb-2">
+                        <span class="font-bold">Next Period Expected:</span> <span id="next-period-date">N/A</span>
+                    </p>
+                    <p>
+                        <span class="font-bold">Approximate Fertile Window:</span> <span id="fertile-window-dates">N/A</span>
+                    </p>
+                    <p class="text-sm italic mt-4 text-[var(--color-text-secondary)]">
+                        These are estimates. Her individual cycle can vary. Use this information to be more aware and supportive.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Find a Professional Section - Reframed as Find Support -->
+        <div id="section-professionals" class="section-content p-8 bg-gradient-to-br from-[var(--color-section-professionals-start)] to-[var(--color-section-professionals-end)] rounded-lg shadow-lg flex flex-col items-center justify-center text-center">
+            <h2 class="text-4xl font-bold text-[var(--color-accent-teal)] mb-6 font-inter">Find Support for Her</h2>
+            <p class="text-xl text-[var(--color-text-secondary)] max-w-2xl mb-8">
+                While this site provides general information, professional guidance is invaluable. Here's where you can find support for her health needs:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-xl mx-auto">
+                <button class="bg-[var(--color-secondary-bg)] p-6 rounded-lg shadow-md border border-[var(--color-text-secondary)] hover:shadow-lg transition-shadow duration-300 text-left" onclick="showProfessionalDetails('gynecologist')">
+                    <div class="text-4xl mb-4 text-center">👩‍⚕️</div>
+                    <h3 class="text-xl font-semibold text-[var(--color-text-primary)] text-center">Gynecologists</h3>
+                    <p class="text-[var(--color-text-secondary)] text-sm text-center">For reproductive health and period-related concerns.</p>
+                </button>
+                <button class="bg-[var(--color-secondary-bg)] p-6 rounded-lg shadow-md border border-[var(--color-text-secondary)] hover:shadow-lg transition-shadow duration-300 text-left" onclick="showProfessionalDetails('nutritionist')">
+                    <div class="text-4xl mb-4 text-center">🥗</div>
+                    <h3 class="text-xl font-semibold text-[var(--color-text-primary)] text-center">Nutritionists & Dietitians</h3>
+                    <p class="text-[var(--color-text-secondary)] text-sm text-center">For dietary advice, especially for conditions like anaemia.</p>
+                </button>
+                <button class="bg-[var(--color-secondary-bg)] p-6 rounded-lg shadow-md border border-[var(--color-text-secondary)] hover:shadow-lg transition-shadow duration-300 text-left" onclick="showProfessionalDetails('therapist')">
+                    <div class="text-4xl mb-4 text-center">🧘‍♀️</div>
+                    <h3 class="text-xl font-semibold text-[var(--color-text-primary)] text-center">Therapists & Counselors</h3>
+                    <p class="text-[var(--color-text-secondary)] text-sm text-center">For emotional well-being and mental health support.</p>
+                </button>
+                <button class="bg-[var(--color-secondary-bg)] p-6 rounded-lg shadow-md border border-[var(--color-text-secondary)] hover:shadow-lg transition-shadow duration-300 text-left" onclick="showProfessionalDetails('gp')">
+                    <div class="text-4xl mb-4 text-center">💪</div>
+                    <h3 class="text-xl font-semibold text-[var(--color-text-primary)] text-center">General Practitioners</h3>
+                    <p class="text-[var(--color-text-secondary)] text-sm text-center">For overall health check-ups and referrals.</p>
+                </button>
+            </div>
+        </div>
+
+        <!-- AI Chatbot Section -->
+        <div id="section-chatbot" class="section-content p-8 bg-gradient-to-br from-[var(--color-section-chatbot-start)] to-[var(--color-section-chatbot-end)] rounded-lg shadow-lg flex flex-col items-center justify-center text-center">
+            <h2 class="text-4xl font-bold text-[var(--color-accent-purple)] mb-6 font-inter">AI Chat: Ask About Mood Swings</h2>
+            <p class="text-xl text-[var(--color-text-secondary)] max-w-2xl mb-8">
+                Ask our AI chatbot any questions you have about women's mood swings during their cycle, and how you can offer support.
+            </p>
+            <div class="chat-container w-full max-w-3xl mx-auto">
+                <div id="chat-messages" class="chat-messages flex flex-col p-4 text-left">
+                    <!-- Chat messages will be appended here -->
+                    <div class="message-bubble ai">
+                        Hello! I'm here to help you understand more about mood swings during her cycle. What would you like to know?
+                    </div>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="chat-input" placeholder="Type your question here..." class="flex-grow">
+                    <button id="send-chat-btn" class="bg-gradient-to-r from-[var(--color-accent-purple)] to-[var(--color-accent-pink)] hover:from-[var(--color-accent-purple)] hover:to-[var(--color-accent-pink)] text-white px-6 py-3 rounded-lg transition-all duration-300">Send</button>
+                </div>
+                <div id="chat-loading" class="loading-indicator hidden">
+                    <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-[var(--color-accent-purple)]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                    Thinking...
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Professional Details Modal -->
+    <div id="professional-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeProfessionalDetails()">&times;</span>
+            <h3 id="modal-title" class="text-2xl font-bold text-[var(--color-text-primary)] mb-4"></h3>
+            <div id="modal-content" class="text-left text-[var(--color-text-secondary)]"></div>
+        </div>
+    </div>
+
+    <!-- Message box for alerts/confirmations -->
+    <div id="message-box" class="fixed bottom-4 right-4 bg-[var(--color-accent-blue)] text-white px-6 py-3 rounded-lg shadow-xl hidden">
+        <p id="message-content"></p>
+        <button class="ml-4 text-white font-bold" onclick="document.getElementById('message-box').classList.add('hidden')">X</button>
+    </div>
+
+    <script type="module">
+        // Function to show a custom message box (replaces alert/confirm)
+        function showMessage(message, type = 'info') {
+            const messageBox = document.getElementById('message-box');
+            const messageContent = document.getElementById('message-content');
+            messageContent.textContent = message;
+
+            // Lines 730-733: Reset classes for message box
+            messageBox.style.backgroundColor = ''; // Reset background
+            messageBox.classList.remove('hidden');
+
+
+            if (type === 'error') {
+                messageBox.style.backgroundColor = 'var(--color-accent-red)';
+            } else if (type === 'success') {
+                messageBox.style.backgroundColor = 'var(--color-accent-green)';
+            } else {
+                messageBox.style.backgroundColor = 'var(--color-accent-blue)';
+            }
+            messageBox.classList.remove('hidden');
+        }
+
+        // --- Theme Toggle Logic ---
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+
+        function setTheme(theme) {
+            body.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            if (theme === 'dark') {
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            } else {
+                sunIcon.classList.remove('hidden');
+                moonIcon.classList.add('hidden');
+            }
+        }
+
+        function toggleTheme() {
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            setTheme(newTheme);
+        }
+
+        // Apply saved theme on load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            setTheme(savedTheme);
+        });
+
+        themeToggle.addEventListener('click', toggleTheme);
+
+
+        // --- Navigation Logic ---
+        const navButtons = document.querySelectorAll('nav button');
+
+        // Function to scroll to a section and update active nav button
+        function scrollToSection(sectionId) {
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                // Scroll smoothly to the target section
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+
+                // Update active state for nav buttons
+                navButtons.forEach(button => {
+                    const buttonSectionId = button.id.replace('nav-', 'section-');
+                    if (buttonSectionId === sectionId) {
+                        button.classList.add('bg-white', 'text-[var(--color-accent-blue)]', 'shadow-md');
+                        button.classList.remove('text-white', 'hover:bg-white', 'hover:text-[var(--color-accent-blue)]', 'hover:shadow-md');
+                    } else {
+                        button.classList.remove('bg-white', 'text-[var(--color-accent-blue)]', 'shadow-md');
+                        button.classList.add('text-white', 'hover:bg-white', 'hover:text-[var(--color-accent-blue)]', 'hover:shadow-md');
+                    }
+                });
+            }
+        }
+
+        // Event listeners for navigation buttons
+        navButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const section = button.id.replace('nav-', 'section-');
+                scrollToSection(section);
+            });
+        });
+
+        // Home section buttons (these will also use the new scroll function)
+        document.getElementById('home-explore-resources').addEventListener('click', () => {
+            scrollToSection('section-resources');
+        });
+        document.getElementById('home-start-tracking').addEventListener('click', () => {
+            scrollToSection('section-tracker');
+        });
+
+        // Set initial active button style and scroll to home on load
+        // This ensures the home button is active and the page is at the top initially
+        document.addEventListener('DOMContentLoaded', () => {
+            scrollToSection('section-home');
+        });
+
+
+        // --- Period Tracker Logic ---
+        const lastPeriodInput = document.getElementById('lastPeriod');
+        const cycleLengthInput = document.getElementById('cycleLength');
+        const calculateButton = document.getElementById('calculate-dates');
+        const trackerMessage = document.getElementById('tracker-message');
+        const nextPeriodDateSpan = document.getElementById('next-period-date');
+        const fertileWindowDatesSpan = document.getElementById('fertile-window-dates');
+
+        calculateButton.addEventListener('click', () => {
+            const lastPeriodDateStr = lastPeriodInput.value;
+            const cycleLength = parseInt(cycleLengthInput.value);
+
+            if (!lastPeriodDateStr || isNaN(cycleLength) || cycleLength < 20 || cycleLength > 45) {
+                showMessage("Please enter a valid last period date and cycle length (20-45 days).", "error");
+                trackerMessage.classList.add('hidden');
+                return;
+            }
+
+            const lastPeriod = new Date(lastPeriodDateStr);
+            if (isNaN(lastPeriod.getTime())) { // Check for invalid date
+                showMessage("Invalid date entered. Please use YYYY-MM-DD format.", "error");
+                trackerMessage.classList.add('hidden');
+                return;
+            }
+
+            // Calculate next period start date
+            const nextPeriodStart = new Date(lastPeriod);
+            nextPeriodStart.setDate(lastPeriod.getDate() + cycleLength);
+
+            // Calculate fertile window (approx. 5 days before ovulation + ovulation day)
+            // Assuming ovulation is 14 days before the *next* period, for a variable cycle.
+            const ovulationDay = new Date(lastPeriod);
+            ovulationDay.setDate(lastPeriod.getDate() + (cycleLength - 14));
+
+            const fertileStart = new Date(ovulationDay);
+            fertileStart.setDate(ovulationDay.getDate() - 5); // 5 days before ovulation
+
+            const fertileEnd = new Date(ovulationDay);
+            fertileEnd.setDate(ovulationDay.getDate() + 1); // Ovulation day + 1 (for a 6-day window)
+
+            // Format dates for display
+            const formatDate = (date) => {
+                return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+            };
+
+            nextPeriodDateSpan.textContent = formatDate(nextPeriodStart);
+            fertileWindowDatesSpan.textContent = `${formatDate(fertileStart)} - ${formatDate(fertileEnd)}`; /* Fixed typo here */
+            trackerMessage.classList.remove('hidden');
+        });
+
+        // --- Professional Details Modal Logic ---
+        const professionalData = {
+            gynecologist: {
+                title: "Gynecologists: Reproductive Health & Beyond",
+                content: `
+                    Gynecologists specialize in women's reproductive health. They are crucial for:
+                    - Routine Check-ups: Annual exams, including Pap smears and breast exams for early detection.
+                    - Menstrual Health: Addressing issues like irregular, heavy, or painful periods (e.g., PCOS, endometriosis).
+                    - Contraception: Discussing and prescribing various birth control methods.
+                    - Fertility & Pregnancy: Pre-conception counseling, prenatal care, and delivery.
+                    - Menopause Management: Providing support and treatment for menopausal symptoms.
+                    - STI Prevention & Testing: Guidance on sexual health and testing for sexually transmitted infections.
+                    How they help: They conduct physical exams, order tests (blood work, ultrasounds), prescribe medications, offer counseling, and perform necessary procedures. Encourage her to schedule regular visits.
+                `
+            },
+            nutritionist: {
+                title: "Nutritionists & Dietitians: Fueling Her Well-being",
+                content: `
+                    Nutritionists and dietitians provide expert guidance on food and nutrition, vital for:
+                    - Balanced Diet: Helping her create healthy eating habits for overall well-being.
+                    - Period Symptom Management: Advising on foods that can alleviate cramps, bloating, and mood swings.
+                    - Anaemia Support: Recommending iron-rich foods and strategies to improve iron absorption, especially important for women.
+                    - Pregnancy & Postpartum Nutrition: Ensuring she gets adequate nutrients during these critical phases.
+                    - Weight Management: Developing sustainable plans for healthy weight.
+                    - Specific Conditions: Providing dietary advice for conditions like PCOS, diabetes, or digestive issues.
+                    How they help: They assess her current dietary habits, create personalized meal plans, provide nutritional education, and offer practical cooking tips. Support her healthy food choices.
+                `
+            },
+            therapist: {
+                title: "Therapists & Counselors: Supporting Her Mental Health",
+                content: `
+                    Mental health professionals offer a safe space and strategies for emotional well-being:
+                    - Mood Swings & PMS/PMDD: Helping her understand and cope with significant emotional changes related to her cycle.
+                    - Anxiety & Depression: Providing strategies and therapy for managing these common mental health challenges.
+                    - Stress Management: Teaching techniques to deal with daily stressors and life pressures.
+                    - Relationship Communication: Improving communication skills within relationships.
+                    - Body Image Issues: Addressing concerns about self-perception and body confidence.
+                    - Life Transitions: Supporting her through major life changes (e.g., career, motherhood, grief).
+                    How they help: They provide talk therapy, teach coping mechanisms, offer emotional support, and can recommend further specialized support if needed. Encourage open conversations about her feelings.
+                `
+            },
+            gp: {
+                title: "General Practitioners: Her First Stop for Health",
+                content: `
+                    General Practitioners (GPs) are primary care doctors who provide comprehensive health services:
+                    - Routine Check-ups: Annual physicals and general health assessments.
+                    - Vaccinations: Ensuring she is up-to-date on necessary immunizations.
+                    - Basic Screenings: Initial checks for common health issues like blood pressure, cholesterol, and blood sugar.
+                    - Managing Common Illnesses: Diagnosing and treating colds, flu, infections, and other general ailments.
+                    - Initial Women's Health Concerns: Providing initial assessment for period irregularities, UTIs, or other concerns, and referring to specialists if needed.
+                    - Referrals to Specialists: Connecting her with gynecologists, nutritionists, therapists, or other specialists when more focused care is required.
+                    How they help: They conduct physical exams, diagnose common conditions, prescribe basic medications, offer preventative care advice, and coordinate care with specialists. Encourage her to have a regular GP.
+                `
+            }
+        };
+
+        // Make functions globally accessible for inline onclick attributes
+        window.showProfessionalDetails = function(type) {
+            console.log("showProfessionalDetails called with type:", type); // Debug log
+            const modal = document.getElementById('professional-modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalContent = document.getElementById('modal-content');
+
+            const data = professionalData[type];
+            if (data) {
+                modalTitle.textContent = data.title;
+                // Replace newline characters with <br> for proper display in HTML
+                modalContent.innerHTML = data.content.replace(/\n/g, '<br>');
+                modal.style.display = 'flex'; // Show the modal using flex for centering
+                console.log("Modal display set to flex for type:", type); // Debug log
+            } else {
+                console.error("No data found for professional type:", type); // Debug log
+            }
+        }
+
+        window.closeProfessionalDetails = function() {
+            console.log("closeProfessionalDetails called"); // Debug log
+            document.getElementById('professional-modal').style.display = 'none'; // Hide the modal
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('professional-modal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // --- AI Chatbot Logic ---
+        const chatInput = document.getElementById('chat-input');
+        const sendChatBtn = document.getElementById('send-chat-btn');
+        const chatMessages = document.getElementById('chat-messages');
+        const chatLoading = document.getElementById('chat-loading');
+
+        let chatHistory = [{ role: "model", parts: [{ text: "Hello! I'm here to help you understand more about mood swings during her cycle. What would you like to know?" }] }];
+
+        // Function to display a message in the chat
+        function displayMessage(message, sender) {
+            const messageBubble = document.createElement('div');
+            messageBubble.classList.add('message-bubble', sender);
+            // Clean the message: remove leading asterisks, hyphens, or plus signs from lines
+            const cleanedMessage = message.replace(/^[*-+]\s*/gm, '');
+            messageBubble.textContent = cleanedMessage;
+            chatMessages.appendChild(messageBubble);
+            chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll to bottom
+        }
+
+// Function to send message to AI with exponential backoff
+async function sendMessageToAI() {
+    const userMessage = chatInput.value.trim();
+    if (userMessage === '') return;
+
+    displayMessage(userMessage, 'user');
+    chatInput.value = ''; // Clear input
+
+    chatLoading.classList.remove('hidden'); // Show loading indicator
+
+    // Modified prompt for more informative, plain text, point-wise responses
+    const prompt = `You are an AI assistant designed to help men understand women's menstrual cycle mood swings and how to offer support. Provide clear, concise, and informative answers in a point-wise format. For example, use numbered points (1., 2., 3.) or simple bullet-like phrases without using markdown characters like asterisks (*) or hyphens. Focus on providing the necessary information directly. User question: "${userMessage}"`;
+
+    const MAX_RETRIES = 3;
+    let retries = 0;
+    let delay = 1000; // 1 second
+    let response = null; // Declare response here
+
+    while (retries < MAX_RETRIES) {
+        try {
+            // Ensure the API key parameter is left empty for Canvas to inject it.
+            // If you are running this outside of the Canvas environment, you would need to provide a valid API key here.
+            const apiKey = "AIzaSyAGIQe18lMIGkh2T8pCh7k3OA0yzlNRi84"; // Leave this empty for Canvas to automatically provide the API key.
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+            response = await fetch(apiUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ contents: [{ role: "user", parts: [{ text: prompt }] }] })
+            });
+
+            if (!response.ok) {
+                // Attempt to parse error response for more details
+                const errorData = await response.json().catch(() => ({ message: 'Failed to parse error response' }));
+                console.error(`API Error: ${response.status} - ${response.statusText}`, errorData);
+                // Display a more specific error message if available from the API
+                throw new Error(`API returned status ${response.status}: ${errorData.error?.message || response.statusText || 'Unknown error'}`);
+            }
+
+            const result = await response.json();
+            chatLoading.classList.add('hidden'); // Hide loading indicator
+
+            if (result.candidates && result.candidates.length > 0 &&
+                result.candidates[0].content && result.candidates[0].content.parts &&
+                result.candidates[0].content.parts.length > 0) {
+                const aiResponse = result.candidates[0].content.parts[0].text;
+                displayMessage(aiResponse, 'ai');
+                return; // Exit loop on success
+            } else {
+                console.error("Unexpected API response structure:", result);
+                displayMessage("Sorry, I couldn't generate a response. The AI provided an unexpected format. Please try again.", 'ai');
+                return; // Exit loop if response structure is bad
+            }
+        } catch (error) {
+            console.error("Error fetching AI response:", error);
+            retries++;
+            if (retries < MAX_RETRIES) {
+                await new Promise(res => setTimeout(res, delay));
+                delay *= 2; // Exponential backoff
+            } else {
+                // Display the specific error message if it came from the API, otherwise the generic one
+                displayMessage(`An error occurred while connecting to the AI after multiple retries. Details: ${error.message || 'Please try again later.'}`, 'ai');
+            }
+        } finally {
+            // Ensure loading is hidden regardless of success or final failure
+            chatLoading.classList.add('hidden');
+        }
+    }
+}
+
+
+        sendChatBtn.addEventListener('click', sendMessageToAI);
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessageToAI();
+            }
+        });
+
+        // --- Personalized Support Suggestion Logic ---
+        const supportInput = document.getElementById('support-input');
+        const getSupportBtn = document.getElementById('get-support-btn');
+        const supportOutput = document.getElementById('support-output');
+        const supportText = document.getElementById('support-text');
+        const supportLoading = document.getElementById('support-loading');
+
+        getSupportBtn.addEventListener('click', async () => {
+            const userFeeling = supportInput.value.trim();
+            if (userFeeling === '') {
+                showMessage("Please describe how she's feeling to get support ideas.", "error");
+                supportOutput.classList.add('hidden');
+                return;
+            }
+
+            supportLoading.classList.remove('hidden');
+            supportOutput.classList.add('hidden'); // Hide previous output
+
+            // Modified prompt for more informative, plain text, point-wise responses for support suggestions
+            const prompt = `You are an AI assistant providing empathetic and actionable advice to men on how to support their female partners during their menstrual cycle. Their partner is feeling: "${userFeeling}". Provide specific, practical, and direct ways the partner can offer support in a point-wise format. For example, use numbered points (1., 2., 3.) or simple bullet-like phrases without using markdown characters like asterisks (*) or hyphens. Focus on actionable help and provide enough detail to be useful.`;
+
+            const MAX_RETRIES = 3;
+            let retries = 0;
+            let delay = 1000; // 1 second
+            let response = null; // Declare response here
+
+            while (retries < MAX_RETRIES) {
+try {
+    // If running inside Canvas, leave API key blank. Else, insert your valid API key.
+    const apiKey = "AIzaSyAGIQe18lMIGkh2T8pCh7k3OA0yzlNRi84";     const prompt = "Your prompt text here"; // Replace this with your actual prompt
+    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+    const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            contents: [{ role: "user", parts: [{ text: prompt }] }]
+        })
+    });
+
+    if (!response.ok) {
+        const errorData = await response.json().catch(() => ({ message: 'Failed to parse error response' }));
+        console.error(`API Error: ${response.status} - ${response.statusText}`, errorData);
+        throw new Error(`API returned status ${response.status}: ${errorData.error?.message || response.statusText || 'Unknown error'}`);
+    }
+
+    const result = await response.json();
+    supportLoading.classList.add('hidden');
+
+    const suggestion = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+    if (suggestion) {
+        supportText.innerHTML = suggestion.replace(/\n/g, '<br>');
+        supportOutput.classList.remove('hidden');
+    } else {
+        console.error("Unexpected API response structure:", result);
+        supportText.textContent = "Sorry, I couldn't generate support ideas. Please try again.";
+        supportOutput.classList.remove('hidden');
+    }
+} catch (error) {
+    console.error("Error fetching AI support suggestion:", error);
+    retries++;
+    if (retries < MAX_RETRIES) {
+        await new Promise(res => setTimeout(res, delay));
+        delay *= 2;
+    } else {
+        supportText.textContent = `An error occurred while generating support ideas after multiple retries. Details: ${error.message || 'Please try again later.'}`;
+        supportOutput.classList.remove('hidden');
+    }
+} finally {
+    supportLoading.classList.add('hidden');
+}
+            }
+        });
+    </script>
+</body>
+</html>
