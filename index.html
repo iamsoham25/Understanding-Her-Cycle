@@ -1039,7 +1039,7 @@ async function sendMessageToAI() {
         try {
             // Ensure the API key parameter is left empty for Canvas to inject it.
             // If you are running this outside of the Canvas environment, you would need to provide a valid API key here.
-            const apiKey = "AIzaSyAGIQe18lMIGkh2T8pCh7k3OA0yzlNRi84"; // Leave this empty for Canvas to automatically provide the API key.
+            const apiKey = API_Key; // Leave this empty for Canvas to automatically provide the API key.
             const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
 
             response = await fetch(apiUrl, {
@@ -1171,4 +1171,5 @@ try {
     </script>
 </body>
 </html>
+
 
